@@ -1,2 +1,3 @@
-# Jenkins
-Project on Jenkinsfile
+# maven-project
+
+Simple Maven Project
