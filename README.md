@@ -1,3 +1,3 @@
 # maven-project
 
-Simple Maven Project
+Project to Test Maven Project Automation with Pool SCM
