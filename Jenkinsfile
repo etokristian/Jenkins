@@ -3,17 +3,20 @@ pipeline {
         pollSCM('* * * * *')
     }
     agent any
+    tools{
+        maven 'M2_HOME'
+    }
     stages {
         stage('Build') {
             steps {
-                echo 'Build Step'
-                sleep 2
+                sh 'mvn clean'
+                sh 'mvn install'
+                sh 'mvn package'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test step'
-                sleep 2
+                sh 'mvn test'
             }
         }
         stage('Deploy') {
